@@ -43,6 +43,7 @@ const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const 
 
     // Initialize edge lists for each left node, based on the incoming set of edges.
     // While we're at it, we check that every node has at least one associated edge.
+    // (Note: We filter out the edges that invalidly refer to a node on the left or right outside [0, n).)
     {
         int leftEdgeCounts[n], rightEdgeCounts[n];
         std::fill_n(leftEdgeCounts, n, 0);
@@ -50,8 +51,12 @@ const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const 
 
         fo(edgeIndex, allEdges.size()) {
             const WeightedBipartiteEdge& edge = allEdges[edgeIndex];
-            ++leftEdgeCounts[edge.left];
-            ++rightEdgeCounts[edge.right];
+            if (edge.left >= 0 && edge.left < n) {
+                ++leftEdgeCounts[edge.left];
+            }
+            if (edge.right >= 0 && edge.right < n) {
+                ++rightEdgeCounts[edge.right];
+            }
         }
 
         fo(i, n) {
@@ -69,7 +74,9 @@ const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const 
     // Actually add to the edge lists now.
     fo(edgeIndex, allEdges.size()) {
         const WeightedBipartiteEdge& edge = allEdges[edgeIndex];
-        leftEdges[edge.left].push_back(LeftEdge(edge.right, edge.cost));
+        if (edge.left >= 0 && edge.left < n && edge.right >= 0 && edge.right < n) {
+            leftEdges[edge.left].push_back(LeftEdge(edge.right, edge.cost));
+        }
     }
 
     // Sort the edge lists, and remove duplicate edges (keep the edge with smallest cost).
