@@ -1,16 +1,22 @@
 Fast C++ implementation of the Hungarian algorithm
 --------------------------------------------------
 
-This is an open-source implementation of the O(N^3) dynamic-programming version of the
+This is an open-source implementation of the "O(N^3)" dynamic-programming version of the
 Hungarian algorithm, for weighted perfect bipartite matching.
-It's written with speed in mind, whilst trying to remain readable.
+It's written with speed in mind, whilst _trying_ to remain readable-ish.
 
-When limited to M edges, I'd expect this to run closer to O(NM), although I haven't verified
-this with analysis.
+It's also written to run in O(NM) time, where there are N nodes and M edges, meaning it will substantially faster
+than a cost-matrix version on sparse graphs.
+(I also think the edge list representation turns out to speed things up even in the dense case.
+The inner loop exploits that edges only intermittently become tight/non-tight, and hence avoids a lot of work
+scanning all the edges every time.)
 
 The best description of the algorithm I'm aware of is
 [this TopCoder post](https://www.topcoder.com/community/data-science/data-science-tutorials/assignment-problem-and-hungarian-algorithm/),
 which I highly recommend should you attempt to understand what's going on.
+
+If you're looking for competition code, I wouldn't recommend the approach taken here.
+You can write something vastly simpler if you assume a dense graph and only care about the asymptotic (worst-case) runtime (e.g. something on the order of 100 lines, rather than 400).
 
 
 ### Usage
