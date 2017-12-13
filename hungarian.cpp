@@ -37,7 +37,7 @@ struct LeftEdge {
 const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const std::vector<WeightedBipartiteEdge> allEdges) {
 
     // Edge lists for each left node.
-    std::vector<LeftEdge> *leftEdges = new std::vector<LeftEdge>[n];
+    const std::unique_ptr<std::vector<LeftEdge>[]> leftEdges(new std::vector<LeftEdge>[n]);
 
     //region Edge list initialization
 
