@@ -17,6 +17,8 @@ which I highly recommend should you attempt to understand what's going on.
 
 If you're looking for competition code, I wouldn't recommend the approach taken here.
 You can write something vastly simpler if you assume a dense graph and only care about the asymptotic (worst-case) runtime (e.g. something on the order of 100 lines, rather than 400).
+For instance, [this gist](https://gist.github.com/jamespayor/5f0118aa8f10f8bc8659da309272cf4a)
+is an ancient O(N^4) version of max-weight matching from my past life.
 
 
 ### Usage
