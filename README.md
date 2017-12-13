@@ -36,7 +36,12 @@ If `matching` is the result, then `matching[i]` gives the node on the right that
 
 ### Sketch of what the algorithm does
 
-Seriously consider reading the TopCoder post. It might help you be slightly less confused.
+Seriously consider reading
+[the TopCoder post](https://www.topcoder.com/community/data-science/data-science-tutorials/assignment-problem-and-hungarian-algorithm/)
+and
+[the Wikipedia page](https://en.wikipedia.org/wiki/Hungarian_algorithm)
+as well.
+That said, here's my attempt at an explanation.
 
 ##### What are node "potentials" even?
 
