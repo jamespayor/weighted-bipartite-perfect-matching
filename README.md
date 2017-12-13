@@ -24,6 +24,16 @@ or a `vector` of size `n` giving the matching.
 If `matching` is the result, then `matching[i]` gives the node on the right that the left node is matched to.
 
 
+### Use cases
+
+- Solving the [assignment problem](https://en.wikipedia.org/wiki/Assignment_problem).
+  - In which we want to assign every node on the left to a node on the right, and minimize cost / maximize profit.
+- General minimum-weight bipartite matching.
+  - Solution sketch: add dummy nodes to fill out one side that have high cost / low profit when matched.
+- (Extra keywords I haven't thought of go here.)
+
+
+
 ### Sketch of what the algorithm does
 
 Seriously consider reading the TopCoder post. It might help you be slightly less confused.
