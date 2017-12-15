@@ -91,6 +91,7 @@ const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const 
             if (edge.right == lastRight) {
                 continue;
             }
+            lastRight = edge.right;
             if (edgeIndex != edgeCount) {
                 edges[edgeCount] = edge;
             }
