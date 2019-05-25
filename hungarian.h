@@ -4,12 +4,12 @@
 #include <vector>
 
 struct WeightedBipartiteEdge {
-    const int left;
-    const int right;
-    const int cost;
+    int left;
+    int right;
+    int cost;
 
     WeightedBipartiteEdge() : left(), right(), cost() {}
-    WeightedBipartiteEdge(const int left, const int right, const int cost) : left(left), right(right), cost(cost) {}
+    WeightedBipartiteEdge(int left, int right, int cost) : left(left), right(right), cost(cost) {}
 };
 
 // Given the number of nodes on each side of the bipartite graph and a list of edges, returns a minimum-weight perfect matching.
