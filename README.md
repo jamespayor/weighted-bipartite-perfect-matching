@@ -5,7 +5,7 @@ This is an open-source implementation of the "O(N^3)" dynamic-programming versio
 Hungarian algorithm, for weighted perfect bipartite matching.
 It's written with speed in mind, whilst _trying_ to remain readable-ish.
 
-It's also written to run in O(NM) time, where there are N nodes and M edges, meaning it will substantially faster
+It's also written to run in O(NM) time, where there are N nodes and M edges, meaning it will be substantially faster
 than a cost-matrix version on sparse graphs.
 (I also think the edge list representation turns out to speed things up even in the dense case.
 The inner loop exploits that edges only intermittently become tight/non-tight, and hence avoids a lot of work
