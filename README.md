@@ -20,6 +20,7 @@ You can write something vastly simpler if you assume a dense graph and only care
 For instance, [this gist](https://gist.github.com/jamespayor/5f0118aa8f10f8bc8659da309272cf4a)
 is an ancient O(N^4) version of max-weight matching from my past life.
 
+Related: See https://github.com/weaversa/weighted-bipartite-perfect-matching for a C reimplementation.
 
 ### Usage
 
