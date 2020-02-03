@@ -37,12 +37,10 @@ If `matching` is the result, then `matching[i]` gives the node on the right that
 
 - Solving the [assignment problem](https://en.wikipedia.org/wiki/Assignment_problem).
   - In which we want to assign every node on the left to a node on the right, and minimize cost / maximize profit.
-- General minimum-weight bipartite matching.
-  - Solution sketch: add dummy nodes to fill out one side that have high cost / low profit when matched.
+- General minimum-weight bipartite matching, where the right side has more nodes than the left.
+  - Solution sketch: add dummy nodes to the left that have high cost / low profit when matched.
 - Maximum-weight bipartite matching.
   - Just negate the costs. (The algorithm copes with costs as large and negative as you like, so long as no two of them add up to an integer overflow.)
-- (Extra keywords I haven't thought of go here.)
-
 
 
 ### Sketch of what the algorithm does
