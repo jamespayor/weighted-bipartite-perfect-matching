@@ -5,6 +5,7 @@
 #include <vector>
 #include <deque>
 #include <cassert>
+#include <limits>
 #include <memory>
 
 #include "hungarian.h"
